@@ -1,7 +1,8 @@
-import { NextComponentType, NextPageContext } from 'next'
+import { NextComponentType } from 'next'
+import '../styles/globals.css'
 
 interface AppProps {
-  Component: NextComponentType<NextPageContext>
+  Component: NextComponentType
   pageProps: object
 }
 

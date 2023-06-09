@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
 
       </Head>
-      <body>
+      <body className='bg-[#FFC2E2]'>
         <Main />
         <NextScript />
       </body>
