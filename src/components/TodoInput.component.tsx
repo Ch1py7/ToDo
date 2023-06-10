@@ -14,13 +14,16 @@ export const TodoInput: FC<TodoInputProps> = ({ addTodo }): ReactElement => {
   }
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setTodo(
-      event.target.value
-    )
+    setTodo(event.target.value)
   }
   return (
     <form onSubmit={handleSubmit} className='flex flex-col justify-center'>
-      <input onChange={handleChange} value={todo} placeholder='Add your todo' className='text-5xl mt-16 h-[6rem] w-[40rem] mx-auto px-6 rounded-3xl' />
+      <input
+        onChange={handleChange}
+        value={todo}
+        placeholder='Add your to do'
+        className='text-5xl mt-16 h-[6rem] w-[40rem] mx-auto px-6 rounded-3xl'
+      />
     </form>
   )
 }

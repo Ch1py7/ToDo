@@ -37,6 +37,8 @@
             "error",
             "never"
         ],
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/prefer-namespace-keyword": "off",
+        "@typescript-eslint/no-namespace": "off"
     }
 }
