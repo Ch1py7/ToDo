@@ -1,14 +1,16 @@
+import { TodoTypes } from '@/types/Todos'
 import { useEffect, useState } from 'react'
 
 export const useTodo = () => {
-  const [todoList, setTodoList] = useState<string[]>([])
+  const [todoList, setTodoList] = useState<Array<TodoTypes>>([])
 
   const addTodo = (todo: string) => {
-    setTodoList((prev) => [...prev, todo])
+    const id = crypto.randomUUID()
+    setTodoList(prev => [...prev, {todo, id}])
   }
 
   const removeTodo = (index: number) => {
-    setTodoList((prev) => prev.filter((_, i) => i !== index))
+    setTodoList(prev => prev.filter((_, i) => i !== index))
   }
 
   useEffect(() => {
