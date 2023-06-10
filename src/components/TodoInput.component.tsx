@@ -21,10 +21,9 @@ export const TodoInput: FC<TodoInputProps> = ({ addTodo }): ReactElement => {
       <input
         onChange={handleChange}
         value={todo}
-        placeholder='Add your todo'
+        placeholder='Add your to do'
         className='text-5xl mt-16 h-[6rem] w-[40rem] mx-auto px-6 rounded-3xl'
       />
     </form>
   )
 }
-
