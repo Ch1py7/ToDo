@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <title>{'To\\/do'}</title>
       </Head>
-      <body className='bg-[#FFC2E2]'>
+      <body className='bg-[#161616]'>
         <Main />
         <NextScript />
       </body>
