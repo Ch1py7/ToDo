@@ -18,11 +18,13 @@ export const Todo: FC<TodoProps> = ({
   removeCompleted,
 }): ReactElement => {
   return (
-    <section className='flex justify-center mt-16 gap-48 min-h-[calc(100vh-95px)]'>
+    <section className='grid grid-cols-1 md:grid-cols-2 px-16 mt-16 gap-48 h-[58rem]'>
       {/* To do list */}
-      <article className='w-[78rem] h-[54rem]'>
-        <h1 className='text-6xl text-center font-medium'>To Do</h1>
-        <div className='bg-[#FF90B3] w-full h-full p-10 rounded-[2rem]'>
+      <article className=''>
+        <h1 className='text-6xl text-center font-medium text-neutral-300'>
+          To Do
+        </h1>
+        <div className='bg-[#202b2f] p-10 max-h-[54rem] rounded-[2rem] overflow-hidden'>
           <ol>
             {todoList.map((todo, index) => (
               <li className='flex justify-between' key={index}>
@@ -48,9 +50,11 @@ export const Todo: FC<TodoProps> = ({
         </div>
       </article>
       {/* To do completed list*/}
-      <article className='w-[78rem] h-[54rem]'>
-        <h1 className='text-6xl text-center font-medium'>Completed</h1>
-        <div className='bg-[#FF90B3] w-full h-full p-10 rounded-[2rem]'>
+      <article className=''>
+        <h1 className='text-6xl text-center font-medium text-neutral-300'>
+          Completed
+        </h1>
+        <div className='bg-[#202b2f] p-10 max-h-[54rem] rounded-[2rem] overflow-hidden'>
           <ol>
             {completedList.map((todo, index) => (
               <li className='flex justify-between' key={index}>
@@ -68,3 +72,6 @@ export const Todo: FC<TodoProps> = ({
     </section>
   )
 }
+
+
+// make me the next css style with tailwind: display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)
